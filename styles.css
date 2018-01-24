@@ -1,0 +1,162 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+ 
+/* ------------------------------------------------------------------------------------------------------- */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  opacity: 1;
+  color: #D3D4D8;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(img/background.jpg)
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  padding: 1.5rem;
+}
+
+.timerBox {
+  position: relative;
+  background-color: #EEEEEE;
+  height: 55%;
+  width: 100%;
+  text-align: center;
+  top: 125px;
+  border: 1px solid black;
+}
+
+@media screen and (min-width: 415px) {
+  .timerBox {
+    width: 365px;
+    height: 360px;
+    margin: 0 auto;
+    top: 240px;
+  }
+}
+
+.timerBox form {
+  height: 37%;
+  padding: 0.7em;
+}
+
+.time {
+  width: 1.4em;
+  border-radius: 6px;
+  border: none;
+  font-size: 50px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+  opacity: 0.8;
+}
+
+.timeSemi {
+  font-size: 30px;
+  color: #393E46;
+  opacity: 0.6;
+}
+
+.startStop {
+  background-image: url(img/play.svg);
+  background-repeat: no-repeat;
+  display: block;
+  width: 160px;
+  height: 30px;
+  margin: 0 auto;
+  padding-left: 28px;
+  border: none;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color: #393E46;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.startStop:hover {
+  color: #08D9D6;
+}
+
+.startStop:focus {
+  outline: none;
+}
+
+.display {
+  font-family: 'Lato', sans-serif;
+  color: #52616B;
+  visibility: hidden;
+}
+
+.resetBox {
+  position: relative;
+  width: 20px;
+  height: auto;
+  margin: 0 auto;
+  vertical-align: middle;
+  bottom: 93px;
+}
+
+#reset {
+  transition: 0.2s;
+  animation: pulse 2.5s infinite;
+  visibility: hidden;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    fill: rgb(187,212,101);
+  }
+  70% {
+    fill: rgb(146,217,123);
+  }
+  100% {
+    fill: rgb(72,227,164);
+  }
+}
+@keyframes pulse {
+  0% {
+    fill: rgb(187,212,101);
+  }
+  70% {
+    fill: rgb(146,217,123);
+  }
+  100% {
+    fill: rgb(72,227,164);
+  }
+}
+
+#reset:hover {
+  fill: #08D9D6;
+}
+
