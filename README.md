@@ -3,7 +3,7 @@ layout: _pages/post
 title: Pomodoro Clock
 date: '2018-01-24'
 link: 'https://andersclso.github.io/FCC-Pomodoro-Clock/'
-code: ''
+code: 'https://github.com/andersclso/FCC-Pomodoro-Clock'
 program: Freecodecamp - Front End Development Certification
 course: Advanced Front End Development Projects
 project: 02 - Build a Tic Tac Toe Game
